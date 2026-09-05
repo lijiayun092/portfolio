@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="OkMkkMzgkzX8iNirI7K1gc">
 <title>李甲韵 · AI增长运营专家 | 案例作品集</title>
 <meta name="description" content="李甲韵 — AI增长运营专家案例作品集：AI驱动的B2B增长体系、AIGC内容工业化、财经MCN矩阵。17年甲乙方复合经验，把AI嵌入业务工作流的增长操盘手。" data-page-node-id="c4k85pzTpPg14LJsPqQX2s">
+<meta property="og:title" content="李甲韵 · AI增长运营专家 | 案例作品集">
+<meta property="og:description" content="AI驱动的B2B增长体系 · AIGC内容工业化 · 财经MCN矩阵——把AI嵌入业务工作流的增长操盘手。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lijiayun092.github.io/portfolio/">
+<meta property="og:image" content="https://lijiayun092.github.io/portfolio/assets/hero-bg.webp">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com" data-page-node-id="gc4te3FPttRe9ihVa6YpXI">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin data-page-node-id="J2Vd0FeZGS0oOCha1fv6A8">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet" data-page-node-id="xU0504HkVQ9CUv4foSr8VS">
@@ -36,17 +42,25 @@ img{display:block;max-width:100%}
 /* ============ 顶部导航 ============ */
 .nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
+  background:transparent;transition:background .3s,border-color .3s;
+  border-bottom:1px solid transparent;
+}
+.nav.scrolled{
   background:rgba(250,248,245,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
   border-bottom:1px solid var(--line);
 }
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 32px;height:60px;display:flex;align-items:center;justify-content:space-between}
-.nav-name{font-weight:600;font-size:15px;letter-spacing:.02em}
-.nav-name span{color:var(--gold);margin-left:8px;font-size:12px;font-weight:400;letter-spacing:.08em}
-.nav-links{display:flex;gap:28px;font-size:13px;color:var(--gray)}
+.nav-name{font-weight:600;font-size:15px;letter-spacing:.02em;color:#fff;transition:color .3s}
+.nav.scrolled .nav-name{color:var(--ink)}
+.nav-name span{color:var(--gold-soft);margin-left:8px;font-size:12px;font-weight:400;letter-spacing:.08em}
+.nav-links{display:flex;gap:28px;font-size:13px;color:rgba(255,255,255,.7);transition:color .3s}
+.nav.scrolled .nav-links{color:var(--gray)}
 .nav-links a{padding:4px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
-.nav-links a:hover{color:var(--navy);border-color:var(--gold)}
+.nav-links a:hover{color:#fff;border-color:var(--gold)}
+.nav.scrolled .nav-links a:hover{color:var(--navy)}
 .progress{position:absolute;top:0;left:0;height:2px;width:0;background:var(--gold);transition:width .1s linear}
-.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#fff}
+.nav.scrolled .nav-toggle{color:var(--ink)}
 .nav-toggle svg{display:block}
 
 /* ============ 章节标题（咨询报告式编号） ============ */
@@ -57,44 +71,64 @@ section{padding:96px 0}
 .sec-title .en{font-family:"Source Serif 4",Georgia,serif;font-size:15px;font-weight:400;color:var(--gray);letter-spacing:.22em;margin-left:14px;text-transform:uppercase}
 
 /* ============ Hero 首屏 ============ */
-.hero{padding:160px 0 0;position:relative;overflow:hidden}
-.hero-bg{position:absolute;inset:0;pointer-events:none;opacity:.5}
-.eyebrow{font-size:13px;letter-spacing:.18em;color:var(--gold);margin-bottom:24px;font-weight:500}
-.hero h1{font-family:"Source Serif 4",Georgia,"Songti SC",serif;font-size:64px;font-weight:700;color:var(--navy);line-height:1.1;letter-spacing:.01em}
-.hero-role{font-size:22px;color:var(--navy);margin-top:14px;font-weight:600}
-.hero-role em{font-style:normal;color:var(--gold)}
-.hero-desc{max-width:640px;color:var(--gray);margin-top:18px;font-size:16px}
+.hero{padding:0;position:relative;overflow:hidden;min-height:100vh;display:flex;flex-direction:column;justify-content:center;background:var(--navy)}
+.hero-bg{position:absolute;inset:0;pointer-events:none;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.22}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,42,74,.85) 0%,rgba(15,42,74,.7) 40%,rgba(15,42,74,.92) 100%)}
+.hero .container{position:relative;z-index:1;padding-top:120px;padding-bottom:60px}
+.eyebrow{font-size:13px;letter-spacing:.18em;color:var(--gold-soft);margin-bottom:20px;font-weight:500}
+.hero h1{font-family:"Source Serif 4",Georgia,"Songti SC",serif;font-size:64px;font-weight:700;color:#fff;line-height:1.1;letter-spacing:.01em}
+.hero-role{font-size:22px;color:rgba(255,255,255,.9);margin-top:14px;font-weight:600}
+.hero-role em{font-style:normal;color:var(--gold-soft)}
+.hero-desc{max-width:580px;color:rgba(255,255,255,.65);margin-top:18px;font-size:16px}
 .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-.tag{font-size:13px;color:var(--navy);border:1px solid var(--line);background:var(--card);padding:6px 16px;border-radius:100px;letter-spacing:.02em}
+.tag{font-size:13px;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.05);padding:6px 16px;border-radius:100px;letter-spacing:.02em}
+.hero-cta{display:inline-flex;align-items:center;gap:8px;margin-top:32px;font-size:14px;color:var(--gold-soft);border:1px solid var(--gold);padding:12px 32px;border-radius:100px;letter-spacing:.08em;transition:background .25s,color .25s}
+.hero-cta:hover{background:var(--gold);color:var(--navy)}
+
+/* Hero 入场动效 */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hero .eyebrow{animation:fadeUp .6s ease .1s both}
+.hero h1{animation:fadeUp .6s ease .2s both}
+.hero .hero-role{animation:fadeUp .6s ease .3s both}
+.hero .hero-desc{animation:fadeUp .6s ease .4s both}
+.hero .tags{animation:fadeUp .6s ease .5s both}
+.hero .hero-cta{animation:fadeUp .6s ease .6s both}
+
+/* 滚动渐入（.reveal 类由 JS 添加，无 JS 时内容始终可见） */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+@media print{.reveal{opacity:1 !important;transform:none !important}.hero *{animation:none !important}}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero *{animation:none !important}}
 
 /* Before × After 对比卡 */
-.ba-wrap{display:grid;grid-template-columns:1fr 64px 1fr;align-items:stretch;gap:0;margin-top:64px}
+.ba-wrap{display:grid;grid-template-columns:1fr 64px 1fr;align-items:stretch;gap:0;margin-top:48px}
 .ba-card{border-radius:12px;padding:36px 36px 30px;position:relative}
 .ba-before{
-  background:#F0EDE8;border:1px solid var(--line);
-  background-image:repeating-linear-gradient(-45deg,transparent 0 10px,rgba(90,100,114,.045) 10px 11px);
+  background:rgba(240,237,232,.08);border:1px solid rgba(255,255,255,.1);
 }
-.ba-after{background:var(--navy);color:#fff;box-shadow:0 16px 48px rgba(15,42,74,.22)}
+.ba-after{background:rgba(176,141,87,.15);border:1px solid rgba(201,169,123,.3);color:#fff}
 .ba-label{font-size:12px;letter-spacing:.2em;margin-bottom:16px;display:flex;align-items:center;gap:10px}
-.ba-before .ba-label{color:var(--gray)}
+.ba-before .ba-label{color:rgba(255,255,255,.5)}
 .ba-after .ba-label{color:var(--gold-soft)}
 .ba-label .dot{width:8px;height:8px;border-radius:50%}
-.ba-before .dot{background:var(--gray)}
+.ba-before .dot{background:rgba(255,255,255,.3)}
 .ba-after .dot{background:var(--gold)}
 .ba-card h3{font-size:19px;margin-bottom:18px;font-weight:600}
-.ba-before h3{color:var(--ink)}
+.ba-before h3{color:rgba(255,255,255,.75)}
+.ba-after h3{color:#fff}
 .ba-list{list-style:none}
 .ba-list li{display:flex;gap:12px;padding:9px 0;font-size:14.5px;align-items:baseline}
 .ba-list li::before{content:"";flex:none;width:14px;height:1px;background:currentColor;opacity:.5;transform:translateY(-4px)}
-.ba-before .ba-list li{color:var(--gray)}
-.ba-after .ba-list li{color:rgba(255,255,255,.88)}
+.ba-before .ba-list li{color:rgba(255,255,255,.55)}
+.ba-after .ba-list li{color:rgba(255,255,255,.85)}
 .ba-after .ba-list b{color:var(--gold-soft);font-family:"Source Serif 4",Georgia,serif;font-size:19px;font-weight:600;margin-right:2px}
 .ba-arrow{display:flex;align-items:center;justify-content:center}
-.ba-note{text-align:center;color:var(--gray);font-size:14px;margin-top:24px;letter-spacing:.06em}
-.ba-note b{color:var(--navy);font-weight:600}
+.ba-note{text-align:center;color:rgba(255,255,255,.5);font-size:14px;margin-top:24px;letter-spacing:.06em}
+.ba-note b{color:var(--gold-soft);font-weight:600}
 
 /* Hero 数据带 */
-.data-band{margin-top:72px;background:var(--navy);color:#fff}
+.data-band{background:var(--navy);color:#fff;border-top:1px solid rgba(255,255,255,.08)}
 .data-band .container{display:grid;grid-template-columns:repeat(4,1fr);padding-top:44px;padding-bottom:44px}
 .db-item{text-align:center;padding:0 16px;border-left:1px solid rgba(255,255,255,.14)}
 .db-item:first-child{border-left:none}
@@ -128,17 +162,19 @@ section{padding:96px 0}
 .tl-desc{font-size:14px;color:var(--gray);margin-top:4px}
 
 /* ============ 02 核心战绩 ============ */
-.kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.kpi{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:36px 32px;transition:transform .25s ease,box-shadow .25s ease}
-.kpi:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(15,42,74,.08);border-color:var(--gold-soft)}
-.kpi-num{font-family:"Source Serif 4",Georgia,serif;font-size:60px;font-weight:600;color:var(--navy);line-height:1;letter-spacing:-.01em}
+.kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.kpi{padding:36px 32px;border-top:2px solid var(--gold);border-right:1px solid var(--line)}
+.kpi:nth-child(3n){border-right:none}
+.kpi:nth-child(n+4){border-top:1px solid var(--line)}
+.kpi-num{font-family:"Source Serif 4",Georgia,serif;font-size:56px;font-weight:600;color:var(--navy);line-height:1;letter-spacing:-.01em;transition:color .25s}
+.kpi:hover .kpi-num{color:var(--gold)}
 .kpi-num.gold{color:var(--gold)}
-.kpi-num small{font-size:26px;font-weight:600}
+.kpi-num small{font-size:24px;font-weight:600}
 .kpi-label{font-size:14px;color:var(--ink);margin-top:14px;font-weight:600}
 .kpi-sub{font-size:13px;color:var(--gray);margin-top:4px}
 
 /* ============ 03 案例 ============ */
-.case{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:56px;margin-bottom:48px;box-shadow:0 4px 24px rgba(15,42,74,.05)}
+.case{background:var(--card);border:1px solid var(--line);border-radius:0;padding:48px;margin-bottom:48px}
 .case.flagship{background:var(--navy);color:#fff;border:none;box-shadow:0 24px 64px rgba(15,42,74,.25)}
 .case-head{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .case-tag{font-size:12px;letter-spacing:.18em;color:var(--gold);font-weight:600;margin-bottom:12px}
@@ -205,6 +241,29 @@ figcaption{font-size:12.5px;color:var(--gray);padding:10px 6px 4px;letter-spacin
 .shots-title::after{content:"";flex:1;height:1px;background:var(--line)}
 .case.flagship .shots-title::after{background:rgba(255,255,255,.14)}
 
+/* 运营闭环：大数字条 / 双卡 / 证据表 */
+.loop-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:32px}
+.ln-item{border-top:2px solid var(--gold);padding-top:14px}
+.ln-num{font-family:"Source Serif 4",Georgia,serif;font-size:34px;font-weight:600;line-height:1.1;color:var(--gold-soft)}
+.ln-num small{font-size:16px}
+.ln-label{font-size:12.5px;color:rgba(255,255,255,.72);margin-top:6px;line-height:1.5}
+.loop-cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px}
+.loop-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:24px 26px}
+.lc-tag{font-size:12px;letter-spacing:.14em;color:var(--gold-soft);font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.lc-tag b{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--gold);color:#0F2A4A;font-size:12px}
+.loop-card ol{margin:0;padding:0;list-style:none;counter-reset:lc}
+.loop-card li{counter-increment:lc;font-size:13.5px;line-height:1.75;color:rgba(255,255,255,.85);padding:7px 0 7px 30px;position:relative}
+.loop-card li::before{content:counter(lc);position:absolute;left:0;top:9px;width:18px;height:18px;border:1px solid rgba(201,169,123,.6);border-radius:50%;font-size:11px;color:var(--gold-soft);display:flex;align-items:center;justify-content:center}
+.loop-note{margin-top:20px;background:rgba(176,141,87,.14);border:1px solid rgba(201,169,123,.4);border-radius:10px;padding:16px 22px;font-size:14.5px;color:#EBD9B4;letter-spacing:.03em;text-align:center}
+.evi-table{margin-top:28px;border:1px solid rgba(255,255,255,.14);border-radius:10px;overflow:hidden}
+.evi-row{display:grid;grid-template-columns:1.15fr .95fr 1.1fr}
+.evi-row+.evi-row{border-top:1px solid rgba(255,255,255,.1)}
+.evi-row>div{padding:14px 18px;font-size:13px;line-height:1.7;color:rgba(255,255,255,.85)}
+.evi-row>div+div{border-left:1px solid rgba(255,255,255,.1)}
+.evi-row.evi-head{background:rgba(176,141,87,.18)}
+.evi-row.evi-head>div{font-size:12px;font-weight:600;letter-spacing:.12em;color:var(--gold-soft)}
+.evi-row b{color:var(--gold-soft);font-weight:600}
+
 /* 图表区 */
 .charts{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
 .chart-box{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:28px}
@@ -218,9 +277,10 @@ figcaption{font-size:12.5px;color:var(--gray);padding:10px 6px 4px;letter-spacin
 .chart-box .full-span{grid-column:1/-1}
 
 /* ============ 04 方法论 ============ */
-.method-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-.method{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:36px 30px;transition:transform .25s ease,box-shadow .25s ease}
-.method:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(15,42,74,.08)}
+.method-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+.method{padding:36px 30px;border-left:1px solid var(--line)}
+.method:nth-child(2n-1){border-left:none}
+.method:nth-child(n+3){border-top:1px solid var(--line)}
 .method-icon{width:64px;height:64px;margin-bottom:22px}
 .method h3{font-size:17.5px;color:var(--navy);font-weight:600;margin-bottom:10px}
 .method p{font-size:14px;color:var(--gray)}
@@ -254,35 +314,49 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
 @media (max-width:960px){
   .hero h1{font-size:46px}
   .kpi-grid{grid-template-columns:repeat(2,1fr)}
+  .kpi{border-right:1px solid var(--line)}
+  .kpi:nth-child(2n){border-right:none}
+  .kpi:nth-child(3n){border-right:1px solid var(--line)}
   .profile-grid{grid-template-columns:1fr;gap:48px}
   .method-grid{grid-template-columns:1fr}
+  .method{border-left:none;border-top:1px solid var(--line)}
+  .method:first-child{border-top:none}
   .case{padding:36px 28px}
   .impact-nums{grid-template-columns:repeat(2,1fr)}
   .data-band .container{grid-template-columns:repeat(2,1fr);gap:32px 0}
   .db-item:nth-child(3){border-left:none}
   .charts{grid-template-columns:1fr}
+  .loop-nums{grid-template-columns:repeat(2,1fr)}
+  .loop-cards{grid-template-columns:1fr}
 }
 @media (max-width:640px){
   .container{padding:0 20px}
   section{padding:64px 0}
-  .hero{padding-top:120px}
+  .hero{min-height:auto}
+  .hero .container{padding-top:100px;padding-bottom:40px}
   .hero h1{font-size:36px}
   .hero-role{font-size:18px}
   .ba-wrap{grid-template-columns:1fr}
   .ba-arrow{padding:14px 0;transform:rotate(90deg)}
   .kpi-grid{grid-template-columns:1fr}
+  .kpi{border-right:none;border-top:1px solid var(--line)}
+  .kpi:first-child{border-top:2px solid var(--gold)}
   .shots{grid-template-columns:1fr}
   .sec-head{gap:12px}
   .sec-num{font-size:32px}
   .sec-title{font-size:22px}
   .sec-title .en{font-size:12px;margin-left:8px}
-  .nav-links{display:none;position:absolute;top:60px;left:0;right:0;background:var(--bg);flex-direction:column;padding:16px 32px 24px;gap:16px;border-bottom:1px solid var(--line)}
+  .nav-links{display:none;position:absolute;top:60px;left:0;right:0;background:var(--bg);flex-direction:column;padding:16px 32px 24px;gap:16px;border-bottom:1px solid var(--line);color:var(--gray)}
+  .nav-links a:hover{color:var(--navy)}
   .nav-links.open{display:flex}
   .nav-toggle{display:block}
   .case{padding:28px 20px}
   .csr{grid-template-columns:1fr;gap:12px}
   .csr-label{writing-mode:horizontal-tb;transform:none;border-left:none;border-bottom:1px solid var(--gold);padding:0 0 6px;justify-self:start}
   .contact-info{gap:28px}
+  .evi-row{grid-template-columns:1fr}
+  .evi-row>div+div{border-left:none;border-top:1px dashed rgba(255,255,255,.14)}
+  .ln-num{font-size:28px}
 }
 </style>
 </head>
@@ -294,7 +368,7 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
   <div class="nav-inner" data-page-node-id="KVfMXMDNqZR4jxSY4TXUxK">
     <a class="nav-name" href="#top" data-page-node-id="74PMeCTMwsQYwOyCZ9926f">李甲韵<span data-page-node-id="NESJG4Ag5ILKJqTE3Cvlgt">AI 增长运营专家</span></a>
     <button class="nav-toggle" id="navToggle" aria-label="菜单" data-page-node-id="GIa4dmNc2pLG7EhIf9WNHA">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F2A4A" stroke-width="2" data-page-node-id="1gTHNiIXqXsEYeZ8ucA8OI"><path d="M3 6h18M3 12h18M3 18h18" data-page-node-id="SwHJFN6cWiJBpRmTR3mlvD"/></svg>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="1gTHNiIXqXsEYeZ8ucA8OI"><path d="M3 6h18M3 12h18M3 18h18" data-page-node-id="SwHJFN6cWiJBpRmTR3mlvD"/></svg>
     </button>
     <div class="nav-links" id="navLinks" data-page-node-id="rxW6vgpdncaMplr3CVJctA">
       <a href="#profile" data-page-node-id="LQNTZajRr7gJe0qwdGcLmo">关于</a>
@@ -309,22 +383,22 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
 
 <!-- ============ Hero 首屏 ============ -->
 <header class="hero" id="top" data-page-node-id="vHHG0BmX1nrIHAdrlCbeNg">
-  <!-- 背景装饰：极淡的增长曲线与网络节点 -->
-  <svg class="hero-bg" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice" fill="none" data-page-node-id="o9MGuZBw46dRaVQYXEy4rb">
-    <path d="M-40 620 C 240 560, 420 640, 700 480 S 1180 300, 1500 240" stroke="#B08D57" stroke-opacity=".18" stroke-width="1.5" data-page-node-id="HIgkKNWdze0upn20R6wesm"/>
-    <path d="M-40 660 C 260 620, 480 680, 760 560 S 1220 420, 1500 360" stroke="#0F2A4A" stroke-opacity=".08" stroke-width="1.5" data-page-node-id="zBMnG5W3Wc4TRgVwz28aFA"/>
-    <g stroke="#0F2A4A" stroke-opacity=".06" data-page-node-id="dbdZ3qZocxAoEv84migiP9"><circle cx="1180" cy="150" r="60" data-page-node-id="Cl4RGzArBl8DFQc9gLNb3t"/><circle cx="1180" cy="150" r="110" data-page-node-id="4YmP34hrOpoFJXScWbK9JJ"/><circle cx="1300" cy="420" r="80" data-page-node-id="E0jIENUky39nk6pdccoXMb"/></g>
-    <circle cx="700" cy="480" r="4" fill="#B08D57" fill-opacity=".4" data-page-node-id="TByga0Mbxp8LnwaKIaFoy9"/><circle cx="1180" cy="150" r="4" fill="#B08D57" fill-opacity=".4" data-page-node-id="Ed90zHmNrgsy14HsU0xYUH"/><circle cx="240" cy="560" r="4" fill="#0F2A4A" fill-opacity=".2" data-page-node-id="zWra6esQbk55j5yiDxuczP"/>
-  </svg>
+  <!-- 全出血背景图：展厅实景 -->
+  <div class="hero-bg">
+    <img src="assets/hero-bg.webp" alt="">
+  </div>
 
   <div class="container" style="position:relative" data-page-node-id="lHRF4IJZKr1xeg8NqWJQrf">
     <p class="eyebrow" data-page-node-id="TOTguOsQAqYNmeVPvpYDCD">17 年甲乙方复合经验 · 从视觉设计到 AI 增长操盘手</p>
     <h1 data-page-node-id="yPOa5aeYlA4RViZivqUpBa">李甲韵</h1>
     <p class="hero-role" data-page-node-id="mQOTVZmRxi6vcrNBmXAECT">AI 增长运营专家 <em data-page-node-id="iWeB5oKrOPFE3smXxRySi7">/</em> 内容增长负责人</p>
-    <p class="hero-desc" data-page-node-id="o7otMne1Tzt4fQFLgUHtik">专注「内容 × 数据 × AI」的增长体系搭建，把 AI 嵌入业务工作流的增长操盘手。工信部认证「AI 营销师」。</p>
+    <p class="hero-desc" data-page-node-id="o7otMne1Tzt4fQFLgUHtik">专注「内容 × 数据 × AI」的全链路闭环增长体系：从内容源头到销售转化，每个环节可追踪、可归因。把 AI 嵌入业务工作流的增长操盘手。工信部认证「AI 营销师」。</p>
     <div class="tags" data-page-node-id="cT3xYw9N9yJcNVPzxzteHX">
-      <span class="tag" data-page-node-id="hNADT273e1aMubcfdy3k4N">AI Agent</span><span class="tag" data-page-node-id="2e8AB2C700psRlGdEN3GRE">B2B 增长</span><span class="tag" data-page-node-id="BNrcWKe7SzxGK0F931SAlv">内容工业化</span><span class="tag" data-page-node-id="sfz7lajFtfYNcl2FxcmVK3">数据驱动</span>
+      <span class="tag" data-page-node-id="hNADT273e1aMubcfdy3k4N">全链路闭环</span><span class="tag" data-page-node-id="2e8AB2C700psRlGdEN3GRE">AI Agent</span><span class="tag" data-page-node-id="BNrcWKe7SzxGK0F931SAlv">B2B 增长</span><span class="tag" data-page-node-id="sfz7lajFtfYNcl2FxcmVK3">内容工业化</span><span class="tag">数据驱动</span>
     </div>
+    <a class="hero-cta" href="#cases">查看案例
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+    </a>
 
     <!-- Before × After 对比卡 -->
     <div class="ba-wrap" data-page-node-id="gQcEAWsNSu71y9HqX7h0Q7">
@@ -384,6 +458,7 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
           <li data-page-node-id="ExsBQBeeseWWFOoSYSRJzr"><b data-page-node-id="xZAPBRDqV5IMdaGFTAhMBF">现任杭州新天元色纺新媒体运营负责人</b> —— 全球色纺面料领军企业、20 年色纺大厂、国家高新技术企业；独立从 0–1 搭建线上获客体系与 AI 营销自动化体系。</li>
           <li data-page-node-id="KhuohN1HeLZ2Cib6Rb8u5z"><b data-page-node-id="OxTiYWahGHXD5CHQc2ynDb">曾在 4000 人上市金融科技集团</b>统筹 10+ 人新媒体团队，主导财经知识付费 MCN 矩阵从 0–1 搭建。</li>
           <li data-page-node-id="AtRPiD5v2g0KP6LidjcOhi"><b data-page-node-id="BoHTjno8HJhUuDT3o7zWDo">既能搭体系带团队，也能亲下场做实操</b>：带过的 10+ 人团队方法论，全部来自亲手跑通的每一个岗位。</li>
+          <li><b>全链路闭环的工作方式</b>：编导时期就在内容端一条龙——拍摄 / 剪辑 / 发布 / 账号运营全包，投放策略亲自把控；如今借 AI 工具把客服承接与数据复盘也并入同一条主 loop——主 loop 嵌套小 loop，从源头到转化全程在线。</li>
         </ul>
         <p class="serif" style="margin-top:22px;font-size:17px;color:var(--navy);letter-spacing:.04em;border-left:2px solid var(--gold);padding-left:14px" data-page-node-id="NG032V4LCBr5qvDy1OjtK5">形式变了无数次，底层引擎是同一套：<b data-page-node-id="du8ByHnh24OgR3lYvYhGCO">用内容驱动增长</b>。</p>
         <span class="cert-badge" data-page-node-id="y3ZREZUQJm6WnSLGDUXXVa">
@@ -519,11 +594,12 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
           <div class="layer" data-page-node-id="8C3E0VJtBdEhYI9rslGpPM">
             <p class="layer-title" data-page-node-id="TYWryj1xfopICUiE6NGlBk"><span class="no" data-page-node-id="MeY7bSSI8RCezUtUQ77FD2">叁</span>AI 基建层 · 多 Agent 营销自动化体系</p>
             <ul data-page-node-id="dP515JB0HGUsiwXT2AcBDI">
-              <li data-page-node-id="YsICWPxu1TH11lKDq37fa1"><b data-page-node-id="aCdWT0LEHmxLPKtsbWZT79">多 Agent 协同：</b>在扣子（Coze）平台上分化多个角色分身协同作业 —— 竞品监控 Agent 经云手机自动采集 22 个竞品账号并按周期输出竞品日报；运营周报 Agent 整合账号 / 投放 / 线索转化数据，自动生成周报与优化建议</li>
+              <li data-page-node-id="YsICWPxu1TH11lKDq37fa1"><b data-page-node-id="aCdWT0LEHmxLPKtsbWZT79">多 Agent 协同：</b>在扣子（Coze）平台上分化多个角色分身协同作业 —— 竞品监控 Agent 经云手机自动采集 22 个竞品账号并按周期输出竞品周报；运营周报 Agent 整合账号 / 投放 / 线索转化数据，自动生成周报与优化建议</li>
               <li data-page-node-id="AsS3I71jGyaQUYLlL3yw5P"><b data-page-node-id="EglchRTEmNjOYwqMdPBG0D">MCP 打通自建 CRM：</b>落地「截图识别 → 线索录入 → 人工审核 → 自动创建」流程并封装为可复用 Skill；支持每日定时拉取线索、按月 / 季度分析流转数据；关键判断保留原图与人工复核口，避免 AI 黑盒</li>
-              <li data-page-node-id="Oj1zYAmVMIfkJvvkzv3eRN"><b data-page-node-id="3LYHXiaSqTKeHaC7TczvIt">钉钉 AI 表格 × Agent：</b>把 AI 表格当作数据库，Agent 直接读取与写入 —— 事实先入表，执行交给 Agent。承载选题、文案、标题、发布进度全流程管理；自动化流程对异常数据「条件分支 → AI 诊断 → 钉钉提醒」，把散落在群聊、相册、Excel 里的线索与周报，变成团队可查询、可复核、可自动流转的行动清单</li>
+              <li data-page-node-id="Oj1zYAmVMIfkJvvkzv3eRN"><b data-page-node-id="3LYHXiaSqTKeHaC7TczvIt">钉钉 AI 表格 × Agent：</b>把两张 AI 表格（内容管理 × 投放监控）当作数据库，Agent 直接读取与写入；自动化流程对异常数据「条件分支 → AI 诊断 → 钉钉提醒」，把散落在群聊、相册、Excel 里的线索与数据，变成团队可查询、可复核、可自动流转的行动清单</li>
             </ul>
           </div>
+          <p style="margin-top:24px" data-page-node-id="loopmode">整套体系按 <b>loop 而非职能</b>搭建：内容、投放、承接、复盘 4 个端口、10 余个环节，80–90% 的工作在同一条主 loop 内自闭环完成；专业门槛环节（如聚光官方投手）外部协作，而<b>数据层始终自己掌握——没有数据层，就无法归因</b>。</p>
         </div>
       </div>
 
@@ -705,36 +781,75 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
         </div>
       </div>
 
-      <!-- 证据截图 -->
-      <p class="shots-title" data-page-node-id="EDaMn5vrGT6oiuEwbogw7Z">过程与产出证据 · EVIDENCE</p>
-      <div class="shots" data-page-node-id="vdvgGDgrB6PbQFsmwMgGGB">
-        <figure class="shot" data-page-node-id="2xYQeoQGIopjjJYJzeTdTc">
-          <img src="assets/mcp-crm.webp" alt="Agent 通过 MCP 打通自研 CRM 管理线索" loading="lazy" data-page-node-id="V1VMgpXIFY05q9s9LFwL2Z">
-          <figcaption data-page-node-id="iH9B12Pf2ofPrIiLSU1kMi">MCP 打通自研 CRM：截图识别 → 字段提取 → 人工审核 → 自动创建线索（客户信息已脱敏）</figcaption>
+      <!-- 证据：AI 基建层（数据底座 × Agent 引擎）怎么跑 -->
+      <p class="shots-title" data-page-node-id="EDaMn5vrGT6oiuEwbogw7Z">AI 基建层实战 · 数据底座 × AGENT 引擎</p>
+
+      <div class="loop-nums">
+        <div class="ln-item"><div class="ln-num">2<small> 张</small></div><div class="ln-label">钉钉 AI 表格分工：内容流转 × 投放监控</div></div>
+        <div class="ln-item"><div class="ln-num">3<small> 路</small></div><div class="ln-label">数据源汇入：聚光后台 / 自研 CRM / 竞品监测</div></div>
+        <div class="ln-item"><div class="ln-num">5<small> 步</small></div><div class="ln-label">Agent 驱动运营闭环每周自动运转</div></div>
+        <div class="ln-item"><div class="ln-num">15<small> 分钟</small></div><div class="ln-label">周报自动产出（原人工 1–2 小时）</div></div>
+      </div>
+
+      <div class="loop-cards">
+        <div class="loop-card">
+          <p class="lc-tag"><b>D</b>数据底座 · DATA FOUNDATION</p>
+          <ol>
+            <li>两张表分工：内容管理表（选题 / 文案 / 标题 / 进度 / 素材）× 投放监控表（日常数据 / 周汇总 / 异常诊断）</li>
+            <li>三路数据汇入：聚光投放后台 → 消费与漏斗；自研 CRM → 线索与转化；竞品监测 → 对标账号动态</li>
+            <li>阈值规则内置：登记成本 ≥400 元 / 人、CPL 250 元 / 人——事实先入表，规则内置</li>
+          </ol>
+        </div>
+        <div class="loop-card">
+          <p class="lc-tag"><b>E</b>Agent 引擎 · ANALYSIS × EXECUTION</p>
+          <ol>
+            <li>分析：抓取数据 → 判定状态 → 异常当日推送；漏斗分步流失、A/B/C 类线索结构变化、结论与建议</li>
+            <li>执行：MCP 打通自研 CRM 自动建档、竞品云手机自动采集、异常自动提醒</li>
+            <li>越用越懂：小循环在监控表内跑每周投放动作；大循环在 Agent 内沉淀全部上下文——下周执行结果再反馈，经验持续沉淀进智能体</li>
+          </ol>
+        </div>
+      </div>
+      <p class="loop-note">事实先入表，分析与执行交给 Agent，决策留给人——我每周只做 3 件事：定口径 → 核对异常 → 确认调整。</p>
+
+      <!-- 证据 → 判断 → 动作：三条真实周记录 -->
+      <p class="shots-title">证据 → 判断 → 动作 · FROM DATA TO ACTION</p>
+      <div class="evi-table">
+        <div class="evi-row evi-head"><div>证据 · 当周原始记录</div><div>系统判断</div><div>实际动作</div></div>
+        <div class="evi-row">
+          <div>登记成本 <b>388.5 元</b>（第 33 周）</div>
+          <div>突破 350 元预警线，判定「关注」</div>
+          <div>P0：排查散剪客群来源 ＋ 优化素材</div>
+        </div>
+        <div class="evi-row">
+          <div>消费 2936.87 元、登记仅 6 人（第 34 周）</div>
+          <div>登记成本 <b>489.5 元</b>突破 400 元阈值，判定「高危」并推送提醒</div>
+          <div>P0：漏斗分步归因，定位流失集中在加微 → 登记环节</div>
+        </div>
+        <div class="evi-row">
+          <div>加微 35 → 17 腰斩，但加微 → 登记转化率反升至 <b>35.3%</b>（第 34 周）</div>
+          <div>判断「到微后的承接能力稳定，问题在前端获客量」</div>
+          <div>缩减周末低效投放，预算聚焦高意向素材</div>
+        </div>
+      </div>
+
+      <!-- 过程截图：每张对应闭环一环 -->
+      <p class="shots-title">过程与产出证据 · EVIDENCE</p>
+      <div class="shots">
+        <figure class="shot full">
+          <img src="assets/monitor-table.webp" alt="小红书投放监控周汇总表" loading="lazy">
+          <figcaption>① 数据采集 × ② 异常预警 × 结果回填——小红书投放监控表 · 周汇总：风险自动分档「正常 / 关注 / 高危」，异常当周生成分析结论与 P0 动作并回填表内</figcaption>
         </figure>
-        <figure class="shot" data-page-node-id="xwQZFSGHrKD1EMsYTrf20c">
-          <img src="assets/weekly-report.webp" alt="Agent 自动生成的数据复盘周报" loading="lazy" data-page-node-id="CuBx7uaLKjTGfEgHO1KEbr">
-          <figcaption data-page-node-id="ID3DVF8sJHZ7QIMqsBsyC1">Agent 自动生成的数据复盘周报：环比分析 + 异常标红 + 优化建议，撰写 1–2 小时 → 15 分钟</figcaption>
+        <figure class="shot">
+          <img src="assets/weekly-report.webp" alt="Agent 自动生成的数据复盘周报" loading="lazy">
+          <figcaption>③ 深度分析——Agent 自动生成的数据复盘周报：环比分析 + 异常标红 + 优化建议，撰写 1–2 小时 → 15 分钟</figcaption>
         </figure>
-        <figure class="shot" data-page-node-id="jPSlt7oAV6XmqkHD7JP75M">
-          <img src="assets/automation-flow.webp" alt="钉钉 AI 表格自动化异常诊断流程" loading="lazy" data-page-node-id="kCZGQGd08LG7YXWWyyHMLX">
-          <figcaption data-page-node-id="NJH8zs2qXd9iHhrXZW8kg4">钉钉 AI 表格自动化：投放异常「条件分支 → AI 诊断 → 钉钉提醒」，当日发现当日处理</figcaption>
+        <figure class="shot">
+          <img src="assets/mcp-crm.webp" alt="Agent 通过 MCP 打通自研 CRM 管理线索" loading="lazy">
+          <figcaption>④ 执行落地——MCP 打通自研 CRM：截图识别 → 字段提取 → 人工审核 → 自动创建线索（客户信息已脱敏）</figcaption>
         </figure>
-        <figure class="shot" data-page-node-id="CTdypCLE0wWx3eJBAuO0QI">
-          <img src="assets/juguang.webp" alt="小红书聚光投放后台数据" loading="lazy" data-page-node-id="XSVUmvkN888UFW4pW12ziB">
-          <figcaption data-page-node-id="PjldchQAaaxOJs5fEICb6q">小红书聚光投放后台：按素材追踪私信进线 / 开口 / 留资成本，按周迭代 ROI 排名</figcaption>
-        </figure>
-        <figure class="shot full" data-page-node-id="8dH8g31BpZGN3k6sgojeNn">
-          <img src="assets/content-table.webp" alt="钉钉 AI 表格内容素材管理" loading="lazy" data-page-node-id="cSTiiukuM8hEXvN8H2qARE">
-          <figcaption data-page-node-id="JLakEr7JidHnL1UX1Hrp3b">钉钉 AI 表格承载内容全流程：选题 / 文案 / 标题 / 发布进度协同管理，5 大内容专栏一目了然</figcaption>
-        </figure>
-        <figure class="shot" data-page-node-id="c0JddCydRe8iWBh96JLhY7">
-          <img src="assets/coze-competitor-track.webp" alt="对话式 Agent 与云手机执行竞品采集" loading="lazy" data-page-node-id="F0tLe50i4gbEDdG4V4MUNX">
-          <figcaption data-page-node-id="XU0H6aA4nmtuLCLpuBZH08">对话式 Agent + 云手机：竞品采集指令下发、执行回传与数据校验，关键数据人工复核确认</figcaption>
-        </figure>
-        <figure class="shot" data-page-node-id="A4AkQ5363CreYpvgDzWGaM">
-          <img src="assets/coze-competitor-report.webp" alt="竞品监控 Agent 自动生成的竞品日报" loading="lazy" data-page-node-id="RKmPhWBWGqpKEIy6CMCgn2">
-          <figcaption data-page-node-id="Sw0qgTzGJhkNrmQFJjJ0IC">竞品监控 Agent 自动生成的竞品日报：分批抓取、爆款追踪、数据校验与异常预警</figcaption>
+        <figure class="shot full">
+          <img src="assets/content-table.webp" alt="钉钉 AI 表格内容素材管理" loading="lazy">
+          <figcaption>协同流转——钉钉 AI 表格 · 内容管理表：选题 / 文案 / 标题 / 发布进度一张表流转，文案沉淀在表里，供制作与发布直接复制使用</figcaption>
         </figure>
       </div>
 
@@ -1032,13 +1147,16 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
 </footer>
 
 <script>
-/* 滚动进度条 */
+/* 滚动进度条 + 导航栏滚动检测 */
 (function(){
   var bar = document.getElementById('progress');
+  var nav = document.querySelector('.nav');
   function onScroll(){
     var h = document.documentElement;
     var max = h.scrollHeight - h.clientHeight;
     bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    if(h.scrollTop > 80){ nav.classList.add('scrolled'); }
+    else{ nav.classList.remove('scrolled'); }
   }
   document.addEventListener('scroll', onScroll, {passive:true});
   onScroll();
@@ -1050,6 +1168,21 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
   var links = document.getElementById('navLinks');
   toggle.addEventListener('click', function(){ links.classList.toggle('open'); });
   links.addEventListener('click', function(e){ if(e.target.tagName === 'A') links.classList.remove('open'); });
+})();
+
+/* 章节滚动渐入（无 JS 时 .reveal 不会添加，内容始终可见；打印/减弱动效时由 CSS 兜底） */
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.12, rootMargin:'0px 0px -60px 0px'});
+  document.querySelectorAll('.sec-head, .profile-grid, .kpi, .case, .method, .contact .container, .timeline, .shots, .charts, .loop-nums, .loop-cards, .evi-table').forEach(function(el){
+    el.classList.add('reveal');
+    io.observe(el);
+  });
 })();
 </script>
 </body>
