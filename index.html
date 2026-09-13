@@ -407,7 +407,7 @@ figcaption{font-size:12.5px;color:var(--gray);padding:10px 6px 4px;letter-spacin
 .method:nth-child(2n-1){border-left:none}
 .method:nth-child(n+3){border-top:1px solid var(--line)}
 .method-icon{width:64px;height:64px;margin-bottom:22px}
-.method h3{font-size:17.5px;color:var(--navy);font-weight:600;margin-bottom:10px}
+.method h3{font-size:17.5px;color:var(--navy);font-weight:600;margin-bottom:10px}.method h3 em{font-style:normal;color:var(--gold);font-weight:600}
 .method p{font-size:14px;color:var(--gray)}
 .method .flow-mini{margin-top:18px;font-size:12.5px;color:var(--gold);letter-spacing:.02em;line-height:2}
 .method.span2{grid-column:1/-1}
@@ -746,7 +746,7 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
           <div class="system-node"><strong>数据层</strong><span class="dot">四级漏斗追踪归因，判断回流内容与投放</span><span class="dot">CRM 承接线索到转化，抓量与进度全程追踪</span></div>
           <div class="system-node"><strong>AI 基础层</strong><span class="dot">多 Agent 协作完成分析复盘与执行操作</span><span class="dot">钉钉 AI 表格承接数据与自动化任务</span><span class="dot">价值锚点始终在人手里，负责目标、规则及决策</span></div>
         </div>
-        <p class="system-quote">内容驱动获客，数据驱动决策，AI 贯穿全链路。</p>
+        <p class="system-quote">内容是增长入口，数据驱动决策，AI 贯穿全链路。</p>
       </div>
 
       <div class="architecture" aria-label="AI 内容增长协同架构">
@@ -1162,7 +1162,18 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
       <h2 class="sec-title" data-page-node-id="fPkkpAS8vq3jGOCJotfmZP">方法论<span class="en" data-page-node-id="axhFattUv0EIF2RF9879uY">Methodology</span></h2>
     </div>
     <div class="method-grid" data-page-node-id="RLgxV5nUi9qZ7LBab7JDfD">
-      <div class="method span2">
+      <div class="method">
+        <svg class="method-icon" viewBox="0 0 64 64" fill="none">
+          <circle cx="24" cy="24" r="11" stroke="#0F2A4A" stroke-width="2"/>
+          <circle cx="40" cy="24" r="11" stroke="#B08D57" stroke-width="2"/>
+          <circle cx="32" cy="39" r="11" stroke="#0F2A4A" stroke-width="1.5" stroke-dasharray="4 4"/>
+        </svg>
+        <h3>内容 × 数据 × AI <em>—— 三维增长体系</em></h3>
+        <p>「内容 × 数据 × AI」不是三个板块叠加，而是交叉贯穿：内容是增长入口；数据以漏斗归因效果、以阈值校准动作，沉淀为 AI 的上下文与语料；AI 贯穿从内容到转化的每个环节。三者互为前提，缺一环，闭环就断。</p>
+        <p class="flow-mini">内容是增长入口 ｜ 数据驱动决策 ｜ AI 贯穿全链路</p>
+        <p class="case-anchor">Case 01 落点：三层增长体系是该框架的完整落地。</p>
+      </div>
+      <div class="method">
         <svg class="method-icon" viewBox="0 0 64 64" fill="none">
           <circle cx="14" cy="14" r="5" stroke="#0F2A4A" stroke-width="2"/>
           <path d="M14 19v12c0 6 6 8 12 8h8" stroke="#0F2A4A" stroke-width="2"/>
@@ -1171,10 +1182,10 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
           <circle cx="50" cy="39" r="5" stroke="#0F2A4A" stroke-width="2"/>
           <circle cx="52" cy="51" r="5" stroke="#B08D57" stroke-width="2"/>
         </svg>
-        <h3>拆解决定输出的上限</h3>
-        <p>不是先选 AI 工具，再找应用场景。任何问题先拆三层：目标层定义「要达成什么、产出什么形态、评判标准是什么」；路径层把目标拆成相互独立、完全穷尽的关键步骤；执行层把每一步细化到输入、输出与验收标准——清晰到一个没有背景知识的人也能执行。拆完再逐层判断：交给生成式 AI、Agent、自动化规则，还是保留人工。结构越清晰，AI 执行越精准；工具会迭代，这套拆解框架不会过时。</p>
-        <p class="flow-mini">目标层 · 方向判断 ｜ 路径层 · 策略规划 ｜ 执行层 · 操作落地</p>
-        <p class="case-anchor">Case 01 落点：三层增长体系（内容 / 数据 / AI）是路径层的拆法；投放端的任务级分工表，就是执行层的粒度。</p>
+        <h3>将抽象问题具体化 <em>—— 结构化拆解</em></h3>
+        <p>体系内的任何维度，都用同一套方法拆解：目标层，定义方向与评判标准；路径层，拆成相互独立的子任务，每个子任务有明确的输入和输出；执行层，把每一步继续细化到可交接的粒度——描述越具体、约束越明确，AI 的产出质量就越高。拆解到位之后，再逐层判断每一步交给谁。</p>
+        <p class="flow-mini">目标层 · 定义方向与标准 ｜ 路径层 · 拆独立子任务 ｜ 执行层 · 细化输入输出</p>
+        <p class="case-anchor">Case 01 落点：投放端的任务级六步分工表，即这套方法的执行层样本。</p>
       </div>
       <div class="method">
         <svg class="method-icon" viewBox="0 0 64 64" fill="none">
@@ -1183,8 +1194,8 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
           <path d="M54 32l-2-6M54 32l-6-2" stroke="#0F2A4A" stroke-width="2"/>
           <circle cx="32" cy="32" r="6" fill="#B08D57"/>
         </svg>
-        <h3>人机协同的运营闭环</h3>
-        <p>责任边界，不是技术边界：AI 能做的事越来越多，但「哪些交给 AI」是人的判断。按任务分工，而不是按职位一刀切——执行和初步分析交给 Agent，规则设定和策略决策由人定；人的每次纠偏和反馈写回系统，Agent 才会越来越懂业务。不是「能自动化就自动化」，而是「能追踪、能归因、能回退」才自动化。</p>
+        <h3>人机协同的运营闭环 <em>—— 保留责任边界</em></h3>
+        <p>责任边界，不是技术边界：AI 能做的事越来越多，但「哪些交给 AI」按任务分工，而不是按职位一刀切。拆解后的每一步交给谁，遵循同一条原则——价值锚点始终在人手里，因为现阶段的 AI 无法替代人为结果负责。每次纠偏与反馈写回系统，形成执行、反馈、迭代的运营 Loop，Agent 持续贴近业务。</p>
         <p class="flow-mini">任务拆解 → 分工 → 反馈纠偏 → 迭代</p>
         <p class="case-anchor">Case 01 落点：投放异常由 Agent 预警，调不调预算由人定，调整依据回写监控 SOP。</p>
       </div>
@@ -1194,8 +1205,8 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
           <path d="M36 20h16v30H36" stroke="#B08D57" stroke-width="2"/>
           <path d="M18 24h12M18 31h12M18 38h8" stroke="#0F2A4A" stroke-width="2"/>
         </svg>
-        <h3>经验沉淀，比经验本身更有价值</h3>
-        <p>运营最怕人走方法散。把实操动作写成运营手册——日清、周迭、月复盘，每个动作有入口、有输出物、有验收标准，别人接手就能跑；高频执行动作封装成 Skill 直接调用；判断逻辑和策略经验留在手册里，因为这些才是真正的方法论。B 端制造和 C 端金融都跑通过，底层是同一套。</p>
+        <h3>经验沉淀，比经验本身更有价值 <em>—— 可复用资产</em></h3>
+        <p>运用 AI 有四个层级：会用、会串、会建、会沉淀。实操动作写成运营手册——每个动作有入口、输出物与验收标准，交接即可运行；高频动作封装为 Skill 直接调用；判断逻辑留在手册里。B 端制造和 C 端金融都跑通过，底层是同一套。</p>
         <p class="flow-mini">经验 → 运营手册（方法论）+ Skill（执行动作）→ 团队资产</p>
         <p class="case-anchor">Case 01 落点：投放监控 SOP、剪映模板与提示词库已在团队内复用。</p>
       </div>
