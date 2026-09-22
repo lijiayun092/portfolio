@@ -423,6 +423,23 @@ figcaption{font-size:12.5px;color:var(--gray);padding:10px 6px 4px;letter-spacin
 .cap.core{background:var(--navy);color:#fff}
 .cap.mid{background:#fff;border:1px solid var(--gold);color:var(--navy)}
 .cap.lite{background:#fff;border:1px solid var(--line);color:var(--gray)}
+/* 能力矩阵 · 升级三栏（v43） */
+.cap-board{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.cap-col{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px 28px;display:flex;flex-direction:column}
+.cap-k{font-family:"Source Serif 4",Georgia,serif;font-size:12px;letter-spacing:.22em;color:var(--gold);font-weight:600;margin-bottom:12px}
+.cap-col h4{font-size:17px;color:var(--navy);font-weight:600;margin-bottom:12px}
+.cap-badge{align-self:flex-start;font-size:11.5px;line-height:1.5;padding:5px 13px;border-radius:100px;border:1px solid var(--gold);color:var(--gold);background:rgba(176,141,87,.07);margin-bottom:16px}
+.cap-points{list-style:none;margin:0 0 18px}
+.cap-points li{font-size:13.5px;color:var(--ink);line-height:1.8;padding-left:15px;position:relative}
+.cap-points li::before{content:"";position:absolute;left:0;top:12px;width:7px;height:1px;background:var(--gold)}
+.cap-col .caps{margin-top:auto;padding-top:16px;border-top:1px dashed var(--line)}
+.cap-col .caps .cap{font-size:12px;padding:5px 13px}
+.cap-col .cap-more{width:100%;margin:10px 0 0;color:var(--gray);font-size:11.5px;letter-spacing:.02em;line-height:1.7}
+.cap-slogan{margin-top:42px;text-align:center;font-family:"Source Serif 4",Georgia,"Songti SC",serif;font-size:20px;color:var(--navy);letter-spacing:.08em}
+.cap-slogan::before{content:"";display:block;width:48px;height:1px;background:var(--gold);margin:0 auto 16px}
+.cap-desc{font-size:13px;color:var(--gray);margin:-4px 0 16px;line-height:1.8;max-width:640px}
+.cap-sub{font-size:13px;color:var(--gold);font-weight:600;margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+.cap-sub::after{content:"";flex:1;height:1px;background:var(--line)}
 
 /* ============ 06 联系 ============ */
 .contact{background:var(--navy);color:#fff;text-align:center;padding:110px 0}
@@ -441,6 +458,7 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
 /* ============ 响应式 ============ */
 @media (max-width:960px){
   .hero h1{font-size:46px}
+  .cap-board{grid-template-columns:1fr}
   .kpi-grid{grid-template-columns:repeat(2,1fr)}
   .kpi{border-right:1px solid var(--line)}
   .kpi:nth-child(2n){border-right:none}
@@ -525,7 +543,7 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
 <nav class="nav" data-page-node-id="quY3s6zG3VlvWKAZqIKvq2">
   <div class="progress" id="progress" data-page-node-id="qid9QZiGC7zR8zPLRbwXE7"></div>
   <div class="nav-inner" data-page-node-id="KVfMXMDNqZR4jxSY4TXUxK">
-    <a class="nav-name" href="#top" data-page-node-id="74PMeCTMwsQYwOyCZ9926f">李甲韵<span data-page-node-id="NESJG4Ag5ILKJqTE3Cvlgt">内容增长负责人 · AI 驱动增长</span></a>
+    <a class="nav-name" href="#top" data-page-node-id="74PMeCTMwsQYwOyCZ9926f">李甲韵<span data-page-node-id="NESJG4Ag5ILKJqTE3Cvlgt">内容增长负责人 · AI 驱动内容增长</span></a>
     <button class="nav-toggle" id="navToggle" aria-label="菜单" data-page-node-id="GIa4dmNc2pLG7EhIf9WNHA">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="1gTHNiIXqXsEYeZ8ucA8OI"><path d="M3 6h18M3 12h18M3 18h18" data-page-node-id="SwHJFN6cWiJBpRmTR3mlvD"/></svg>
     </button>
@@ -554,7 +572,7 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
     <p class="hero-formula">内容 × 数据 × AI</p>
     <p class="hero-desc" data-page-node-id="o7otMne1Tzt4fQFLgUHtik">AI 是差异化武器，内容驱动增长才是底层引擎。17 年甲乙方复合经验，专注「内容 × 数据 × AI」的全链路闭环增长体系：从内容源头到销售转化，每个环节可追踪、可归因。工信部认证「AI 营销师」。</p>
     <div class="tags" data-page-node-id="cT3xYw9N9yJcNVPzxzteHX">
-      <span class="tag" data-page-node-id="2e8AB2C700psRlGdEN3GRE">AI Agent</span><span class="tag">AIGC</span><span class="tag" data-page-node-id="hNADT273e1aMubcfdy3k4N">全链路闭环</span><span class="tag" data-page-node-id="sfz7lajFtfYNcl2FxcmVK3">内容工业化</span><span class="tag" data-page-node-id="BNrcWKe7SzxGK0F931SAlv">B2B 增长</span><span class="tag">数据驱动</span>
+      <span class="tag" data-page-node-id="2e8AB2C700psRlGdEN3GRE">AI Agent</span><span class="tag">AIGC</span><span class="tag" data-page-node-id="hNADT273e1aMubcfdy3k4N">全链路闭环</span><span class="tag" data-page-node-id="sfz7lajFtfYNcl2FxcmVK3">内容工业化</span><span class="tag" data-page-node-id="BNrcWKe7SzxGK0F931SAlv">B2B 获客增长</span><span class="tag">数据驱动</span>
     </div>
     <a class="hero-cta" href="#cases">查看案例
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
@@ -580,7 +598,7 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
       </div>
       <div class="ba-card ba-after" data-page-node-id="2LbuJzrr1bEd92pjWlVKFQ">
         <p class="ba-label" data-page-node-id="97qB7F5kEVbD1GB9QIkrXo"><span class="dot" data-page-node-id="Qc8oRQUUx7GodOREk9HvSc"></span>AFTER · 现在</p>
-        <h3 data-page-node-id="HkzSD7B9MXkkKCCpXp3C9t">内容 × 数据 × AI 增长体系</h3>
+        <h3 data-page-node-id="HkzSD7B9MXkkKCCpXp3C9t">内容 × 数据 × AI 获客增长体系</h3>
         <p style="margin:-10px 0 16px;font-size:13.5px;letter-spacing:.05em;color:var(--gold-soft)" data-page-node-id="IXhNfrnNwA1LLTyTy62yBZ">线上获客 <b data-page-node-id="n37kayaptnQUijhbF8RFO4">1300+</b> 人 · 归因成交近 <b data-page-node-id="oUhAkpzNO7K6nTLqWBISso">2000</b> 万</p>
         <ul class="ba-list" data-page-node-id="Wukoe51ogTKgfgUFHuvMi0">
           <li data-page-node-id="0AF5dLzUQ4H2j0s27Gz80e">投放 10 个月累计 <b data-page-node-id="BZ2HwBghsYcr6krJnl6FPO">18.7</b> 万，ROI <b data-page-node-id="KF9ec4agXNSwKErKPXT6hB">1:4.75</b></li>
@@ -708,7 +726,7 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
       <div class="case-head" data-page-node-id="q7Aqef5a3YBeMrqBRY65p6">
         <div data-page-node-id="z3b41RKaDZjnTUoOEYjLZC">
           <p class="case-tag" data-page-node-id="NtWE04Tl16BoBmrHifRpf2">CASE 01 · 旗舰案例</p>
-          <h3 class="case-title" data-page-node-id="rkDudAlD1VY70fS5807A5G">内容 × 数据 × AI：B2B 增长体系 0–1</h3>
+          <h3 class="case-title" data-page-node-id="rkDudAlD1VY70fS5807A5G">内容 × 数据 × AI：B2B 获客增长体系 0–1</h3>
           <p class="case-org" data-page-node-id="hr5PGPT5TCZDJaRVUGcLtB">杭州新天元织造有限公司 · 全球色纺面料领军企业 · 20 年色纺大厂 · 国家高新技术企业 · 年销售额 4–5 亿</p>
         </div>
         <span class="case-badge" data-page-node-id="HJMwCJMTEcQYDY44JjP2AF">2023.10 — 至今</span>
@@ -731,7 +749,7 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
       <div class="case-lead">
         <div>
           <p class="case-lead-label">MY ROLE · 我的职责</p>
-          <h4>增长体系总负责人，亲自完成从内容到转化的关键环节</h4>
+          <h4>内容增长体系总负责人，亲自完成从内容到转化的关键环节</h4>
         </div>
         <p>在数字化基础薄弱的传统 B2B 制造企业，从 0–1 设计并推动线上获客体系：负责内容策略、平台与投放协同、线索承接、数据复盘及 AI 工作流落地；IT、投放和销售在对应环节协作，我负责业务口径、方案判断与结果追踪。</p>
       </div>
@@ -1221,36 +1239,49 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
       <span class="sec-num" data-page-node-id="Pw5nOOAA5Z4iA4YVVqrZsW">05</span>
       <h2 class="sec-title" data-page-node-id="oEM9QWhc8tkgt7lpJ3dftu">能力矩阵<span class="en" data-page-node-id="SO7CBJrAmpInLwSaHgzQZG">Capabilities</span></h2>
     </div>
-    <div class="cap-group" data-page-node-id="q1QLAYF8G1GdLIig89YsYH">
-      <h3 data-page-node-id="6y1vaDev9muCzsM94EyDa8">AI Agent 与自动化</h3>
-      <div class="caps" data-page-node-id="oCOmaKZICIqL7X74zGou0A">
-        <span class="cap core" data-page-node-id="RKikhMG5S9qlxQNs3BWmnb">Coze</span><span class="cap core" data-page-node-id="I4TLqYAodykFHCRegjPZBz">MCP+Skill</span><span class="cap core" data-page-node-id="XzOinqsUl7NOlDB8xUUUtl">钉钉 AI</span><span class="cap mid" data-page-node-id="iG3OrnYwFnzfNlrPhErqHu">Codex</span><span class="cap mid" data-page-node-id="fMlVpOwAmr0BBa48oAwUF6">飞书生态</span>
+    <div class="cap-group">
+      <h3>内容营销与增长运营</h3>
+      <div class="caps">
+        <span class="cap core">账号定位与矩阵</span><span class="cap core">内容策划与编导</span><span class="cap core">拍摄与剪辑</span><span class="cap core">账号运营</span><span class="cap mid">投放素材把控</span><span class="cap mid">多平台分发</span>
+      </div>
+    </div>
+    <div class="cap-group">
+      <h3>团队管理与体系建设</h3>
+      <p class="cap-desc">统筹 10+ 人新媒体团队——搭建运营 SOP、沉淀方法论与数据体系、负责团队培养，既管得了团队，也下得来一线。</p>
+      <div class="caps">
+        <span class="cap core">团队搭建与管理</span><span class="cap core">运营 SOP</span><span class="cap core">方法论沉淀</span><span class="cap core">数据体系</span><span class="cap mid">团队培养</span><span class="cap mid">跨部门协同</span>
+      </div>
+    </div>
+    <div class="cap-group">
+      <h3>AI 能力</h3>
+      <p class="cap-desc">我的 AI 观：创意、判断与决策留给人，其余交给 AI。</p>
+      <h3 class="cap-sub">AI Agent 与自动化</h3>
+      <div class="caps">
+        <span class="cap core">Coze</span><span class="cap core">MCP+Skill</span><span class="cap core">钉钉 AI</span><span class="cap mid">Codex</span><span class="cap mid">飞书生态</span>
         <p class="cap-more">其他在用：TRAE · Cherry Studio · WorkBuddy · 千问办公 · 豆包工作 · Hermes · Kimi</p>
       </div>
-    </div>
-    <div class="cap-group" data-page-node-id="DpFsNwUFpoALyByX1EgdHQ">
-      <h3 data-page-node-id="vAgpAOlOq1IYRiAHt0p4T4">AIGC 内容生产</h3>
-      <div class="caps" data-page-node-id="55ARtQRSQqlp7ngAKOflNt">
-        <span class="cap core" data-page-node-id="WrhrY3ybGYmZmmB7tu2AYG">Style3D</span><span class="cap mid" data-page-node-id="JmywhDQ5w6dhwFDKhq5NFY">即梦</span><span class="cap mid" data-page-node-id="16pgVjotuZGzO91RThXMpr">可灵</span><span class="cap mid" data-page-node-id="4o2nOkFYdR2WzAh0S03zbd">GPT Image</span><span class="cap lite" data-page-node-id="2A8wt7r62OMqmmcApvQ4eo">Banana</span><span class="cap mid" data-page-node-id="o7oS1qdLiw7OrjH8AxqfvT">节点式创作工作流</span><span class="cap lite">MiniMax Design 等</span>
+      <h3 class="cap-sub">AIGC 内容生产</h3>
+      <div class="caps">
+        <span class="cap core">Style3D</span><span class="cap mid">即梦</span><span class="cap mid">可灵</span><span class="cap mid">GPT Image</span><span class="cap lite">节点式创作工作流</span><span class="cap lite">MiniMax Design 等</span>
+      </div>
+      <h3 class="cap-sub">大模型生态（具备选型与业务落地判断力）</h3>
+      <div class="caps">
+        <span class="cap mid">GPT</span><span class="cap mid">Claude</span><span class="cap mid">Gemini</span><span class="cap mid">GLM</span><span class="cap mid">Kimi</span><span class="cap mid">DeepSeek</span>
       </div>
     </div>
-    <div class="cap-group" data-page-node-id="qf2hzRCh2FFPV8B59paCYs">
-      <h3 data-page-node-id="ftzxYWr4qset7bnZJYRzSz">大模型生态（具备选型与业务落地判断力）</h3>
-      <div class="caps" data-page-node-id="1RThBPAVVqDbuvSlsrKMJ4">
-        <span class="cap mid" data-page-node-id="ZHtC4mhkAAkQKM22Tfgbzj">GPT</span><span class="cap mid" data-page-node-id="TV9rzHXtDHQSByIRqSJLjR">Claude</span><span class="cap mid" data-page-node-id="2TWSV7PN07d3CY2pO53FM7">Gemini</span><span class="cap mid" data-page-node-id="AhW7JfJkhn4HOwqvUpqUE7">GLM</span><span class="cap mid" data-page-node-id="a5ZtjistXcqGLAaIbC3dE6">Kimi</span><span class="cap mid" data-page-node-id="OzewDLHTEDQAfx5Iup1FKL">DeepSeek</span>
+    <div class="cap-group">
+      <h3>数据分析与归因</h3>
+      <div class="caps">
+        <span class="cap core">数据漏斗分析</span><span class="cap core">ROI 模型</span><span class="cap core">CRM 线索管理</span><span class="cap mid">归因体系</span><span class="cap lite">Axure</span><span class="cap lite">Xmind</span>
       </div>
     </div>
-    <div class="cap-group" data-page-node-id="CuDqp3kBjjEsNtQmH4a4AH">
-      <h3 data-page-node-id="PiBSopC7cEv9Xfr4Stfjo4">数据与产品运营</h3>
-      <div class="caps" data-page-node-id="SUwnJZ7UNqHKGASW2QAhgx">
-        <span class="cap core" data-page-node-id="xxla9D9c3NWAziSSzPswJ0">数据漏斗分析</span><span class="cap core" data-page-node-id="aUeWcujgmlDaWpgOCZIzqO">ROI 模型</span><span class="cap core" data-page-node-id="bqHtSzQzBrxcICnowLknB0">CRM 线索管理</span><span class="cap lite" data-page-node-id="4tBybFWV7KgxBGSCbFcDoY">Axure</span><span class="cap lite" data-page-node-id="FinSExYg3yAPLbfCj1ei8W">Xmind</span>
+    <div class="cap-group">
+      <h3>视觉与视频制作</h3>
+      <div class="caps">
+        <span class="cap mid">Photoshop</span><span class="cap mid">Illustrator</span><span class="cap mid">Premiere</span><span class="cap mid">剪映</span><span class="cap lite">C4D</span><span class="cap lite">FCP</span><span class="cap lite">AE</span>
       </div>
     </div>
-    <div class="cap-group" data-page-node-id="uOd4abiqiqIJ3rgJTm01Kp">
-      <h3 data-page-node-id="dVEvDF8buO6XPy81stk9Eg">视觉与视频制作</h3>
-      <div class="caps" data-page-node-id="e5PceVWmsFFGY2ALaHoFpC">
-        <span class="cap mid" data-page-node-id="5G4eRkRPpfVTHgPa1s3TMy">Photoshop</span><span class="cap mid" data-page-node-id="hrFF3rmRwkBIjM0IB338DN">Illustrator</span><span class="cap mid" data-page-node-id="PRc9EmKh8rvfl0X0YXwp5o">Premiere</span><span class="cap mid" data-page-node-id="Gd3NqdM7Q8mskZMM5SfQ38">剪映</span><span class="cap lite" data-page-node-id="IXiMh00LMppdnr79uYjLcK">C4D</span><span class="cap lite" data-page-node-id="05K9E8Mk9BlGMIQx68xC8o">FCP</span><span class="cap lite" data-page-node-id="QQhkMT0A5iLyIfRVFvawoa">AE</span>
-      </div>
+    <p class="cap-slogan">既能搭体系带团队，也能亲下场做实操</p>
     </div>
   </div>
 </section>
