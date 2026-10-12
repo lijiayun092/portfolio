@@ -174,6 +174,39 @@ section{padding:96px 0}
 .kpi-num small{font-size:24px;font-weight:600}
 .kpi-label{font-size:14px;color:var(--ink);margin-top:14px;font-weight:600}
 .kpi-sub{font-size:13px;color:var(--gray);margin-top:4px}
+/* v44 · 对比式大数字 + 截图角标 + 联动总纲/Agent 阵容 */
+.kpi-num .old{font-size:20px;font-weight:400;color:var(--gray);letter-spacing:0;margin-right:8px}
+.kpi-chip{display:inline-block;font-size:11.5px;font-weight:600;padding:3px 12px;border-radius:100px;background:rgba(176,141,87,.1);border:1px solid var(--gold);color:var(--gold);letter-spacing:.03em}
+.in-num .old{font-size:.42em;font-weight:400;opacity:.5;margin-right:8px}
+.shot-badge{position:absolute;top:16px;left:16px;z-index:5;font-size:11px;letter-spacing:.04em;padding:5px 13px;border-radius:100px;background:rgba(15,42,74,.8);color:#fff;border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(4px)}
+.shot-badge i{font-style:normal;color:#8FD8A8;margin-right:5px}
+.tilted-shot,.flat-shot{position:relative}
+.linkage{margin-top:32px;padding:30px;border:1px solid rgba(201,169,123,.34);border-radius:12px;background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025))}
+.linkage-title{font-size:19px;font-weight:600;color:#fff;margin:10px 0 12px}
+.linkage-title em{font-style:normal;color:var(--gold-soft)}
+.linkage-desc{font-size:13.5px;line-height:1.95;color:rgba(255,255,255,.72);max-width:960px}
+.linkage-desc b{color:#EBD9B4;font-weight:600}
+.linkage-loop{margin-top:14px;font-size:12.5px;color:var(--gold-soft);letter-spacing:.03em}
+.agent-roster{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:24px}
+.agent-card{padding:18px 16px;border:1px solid rgba(154,137,230,.42);border-radius:8px;background:rgba(127,107,216,.09)}
+.agent-name{font-size:14.5px;color:#fff;font-weight:600}
+.agent-meta{font-size:11px;color:var(--gold-soft);letter-spacing:.06em;margin:6px 0 12px}
+.agent-card ul{list-style:none;margin:0;padding:0}
+.agent-card li{font-size:12px;color:rgba(255,255,255,.68);line-height:1.75;padding-left:12px;position:relative}
+.agent-card li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:1px;background:rgba(154,137,230,.85)}
+.tool-note{font-size:10.5px;color:rgba(255,255,255,.42);margin-top:5px;letter-spacing:.05em}
+/* v46 · 复盘端对话气泡 */
+.chat-intro{font-size:13px;line-height:1.85;color:rgba(255,255,255,.66);margin:10px 0 4px;max-width:860px}
+.chat{margin:18px 0 6px;display:flex;flex-direction:column;gap:12px;max-width:660px}
+.msg{display:flex;gap:10px;align-items:flex-start}
+.msg.me{flex-direction:row-reverse}
+.msg-who{flex:none;font-size:10.5px;letter-spacing:.05em;padding:3px 9px;border-radius:100px;margin-top:9px}
+.msg p{margin:0;font-size:13px;line-height:1.75;padding:10px 16px;border-radius:12px;max-width:80%}
+.msg.me .msg-who{background:rgba(176,141,87,.3);color:#EBD9B4}
+.msg.me p{background:rgba(176,141,87,.15);border:1px solid rgba(201,169,123,.45);color:#F2E7D0;border-top-right-radius:4px}
+.msg.ai .msg-who{background:rgba(127,107,216,.32);color:#DCD5F7}
+.msg.ai p{background:rgba(127,107,216,.13);border:1px solid rgba(154,137,230,.45);color:#E4E0F7;border-top-left-radius:4px}
+.chat-note{font-size:12.5px;color:var(--gold-soft);margin-top:14px;letter-spacing:.02em}
 
 /* ============ 03 案例 ============ */
 .case{background:var(--card);border:1px solid var(--line);border-radius:0;padding:48px;margin-bottom:48px}
@@ -770,7 +803,7 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
       <div class="architecture" aria-label="AI 内容增长协同架构">
         <div class="architecture-head">
           <p class="architecture-title">AI 内容增长协同架构</p>
-          <p class="architecture-sub">Coze 负责分析复盘 · 桌面 Agent 负责系统操作 · 钉钉 AI 表格沉淀业务数据 · 人负责规则、审核与决策</p>
+          <p class="architecture-sub">AI 表格沉淀全部业务数据，Agent 负责分析与执行——数据不出体系，Agent 越用越懂业务</p>
         </div>
         <div class="human-bar">
           <strong>人 · 业务控制层</strong>
@@ -830,11 +863,11 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
               <thead><tr><th>任务步骤</th><th>AI / Agent / 规则</th><th>人</th></tr></thead>
               <tbody>
                 <tr><td class="step">① 数据导出</td><td><span class="tag hold">不自动化</span>聚光反爬严格，手动导出更快</td><td><span class="tag human anchor">主责</span>手动导出后台数据</td></tr>
-                <tr><td class="step">② 解析写表</td><td><span class="tag ai">主责</span>桌面 Agent 解析字段写入表格</td><td><span class="tag human">抽查</span></td></tr>
-                <tr><td class="step">③ 汇总分档</td><td><span class="tag ai">主责</span>自动化规则按阈值分档：正常 / 关注 / 高危</td><td><span class="tag human anchor">定规则</span>设定阈值与分档标准</td></tr>
-                <tr><td class="step">④ 异常诊断</td><td><span class="tag ai">主责</span>AI 生成诊断与优化建议</td><td><span class="tag human">校准</span></td></tr>
-                <tr><td class="step">⑤ 优化调整</td><td><span class="tag ai">辅助</span>素材 ROI 排名提供依据</td><td><span class="tag human anchor">定动作</span>素材 / 预算 / 定向</td></tr>
-                <tr><td class="step">⑥ 结果回流</td><td><span class="tag ai">主责</span>自动归档，进入下周记录</td><td><span class="tag human">确认</span></td></tr>
+                <tr><td class="step">② 解析写表</td><td><span class="tag ai">主责</span>桌面 Agent 解析字段写入表格<div class="tool-note">驱动：桌面 Agent</div></td><td><span class="tag human">抽查</span></td></tr>
+                <tr><td class="step">③ 汇总分档</td><td><span class="tag ai">主责</span>自动化规则按阈值分档：正常 / 关注 / 高危<div class="tool-note">驱动：钉钉 AI 表格 · 自动化规则</div></td><td><span class="tag human anchor">定规则</span>设定阈值与分档标准</td></tr>
+                <tr><td class="step">④ 异常诊断</td><td><span class="tag ai">主责</span>AI 生成诊断与优化建议<div class="tool-note">驱动：钉钉 AI 表格 · AI 辅助诊断</div></td><td><span class="tag human">校准</span></td></tr>
+                <tr><td class="step">⑤ 优化调整</td><td><span class="tag ai">辅助</span>素材 ROI 排名提供依据<div class="tool-note">驱动：表内 ROI 排名视图</div></td><td><span class="tag human anchor">定动作</span>素材 / 预算 / 定向</td></tr>
+                <tr><td class="step">⑥ 结果回流</td><td><span class="tag ai">主责</span>自动归档，进入下周记录<div class="tool-note">驱动：表内自动归档</div></td><td><span class="tag human">确认</span></td></tr>
               </tbody>
             </table>
             <p class="task-split-note">投放端小闭环每周自转；内容、承接、复盘同理——执行交给系统，判断始终在人。</p>
@@ -854,6 +887,7 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
             <p class="scenario-note">它不是素材清单，而是内容项目的协同中枢。</p>
           </div>
           <figure class="tilted-shot">
+            <span class="shot-badge"><i>●</i>钉钉 AI 表格 · 真实在用</span>
             <img src="assets/content-table.webp" alt="钉钉 AI 表格中的内容管理与排期" loading="lazy">
             <figcaption>内容管理 AI 表格 · 选题、正文、排期、进度与分发文案集中管理</figcaption>
           </figure>
@@ -880,6 +914,7 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
             <p class="scenario-note">数据先入表，规则先判断，AI 辅助诊断，人确认动作，结果持续回流。</p>
           </div>
           <div class="screenshot-stack" aria-label="投放监控表三张视图叠放">
+            <span class="shot-badge"><i>●</i>投放监控 AI 表格 · 每日真实记录</span>
             <figure class="back-left"><img src="assets/daily-data.webp" alt="投放监控日常数据" loading="lazy"></figure>
             <figure class="back-right"><img src="assets/anomaly-record.webp" alt="投放异常诊断记录" loading="lazy"></figure>
             <figure class="front"><img src="assets/weekly-summary.webp" alt="投放监控周汇总" loading="lazy"></figure>
@@ -892,12 +927,14 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
             <p>自动化流程按预设阈值识别风险档位，生成诊断记录并发送提醒；是否调整素材、预算或承接动作，仍由人结合业务情况确认。</p>
           </div>
           <figure class="flat-shot">
+            <span class="shot-badge"><i>●</i>表内自动化 · 真实运行流程</span>
             <img src="assets/automation-flow.webp" alt="钉钉 AI 表格异常诊断自动化流程" loading="lazy">
             <figcaption>异常诊断自动化流程 · 条件分支 → AI 辅助诊断 → 新增记录与提醒</figcaption>
           </figure>
         </div>
         <div class="report-visual">
           <div class="report-stack-local" aria-label="Coze 复盘报告叠放">
+            <span class="shot-badge"><i>●</i>Coze Agent · 每周真实产出</span>
             <figure><img src="assets/weekly-report.webp" alt="Coze 数据复盘周报" loading="lazy"></figure>
             <figure><img src="assets/coze-competitor-report.webp" alt="Coze 竞品监控报告" loading="lazy"></figure>
             <figure><img src="assets/weekly-summary.webp" alt="投放周汇总数据" loading="lazy"></figure>
@@ -916,6 +953,7 @@ footer{padding:32px 0;text-align:center;font-size:12.5px;color:var(--gray);lette
             <p class="scenario-note">执行型 Agent 具备环境可替换性：同一流程可迁移至 Codex、WorkBuddy、Trae Work、千问办公、豆包工作等桌面 Agent 方案。</p>
           </div>
           <figure class="flat-shot">
+            <span class="shot-badge"><i>●</i>MCP × 自研 CRM · 真实操作界面</span>
             <img src="assets/mcp-crm.webp" alt="桌面 Agent 通过 MCP 连接自建 CRM 管理线索" loading="lazy">
             <figcaption>MCP 连接自建 CRM · 识别、提取、复核、录入与建档</figcaption>
           </figure>
